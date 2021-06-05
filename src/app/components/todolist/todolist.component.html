@@ -1,0 +1,16 @@
+
+ToDoList <input placeholder="请输入toDoItem" type="text" [(ngModel)]="toDoItem" (keyup)="add($event)"/>
+<br>
+<h3>正在进行</h3> {{ongoing.length}}
+<ul>
+    <li *ngFor="let item of ongoing; let idx=index;">
+        <input type="checkbox" (change)="remove(idx, item)"/>&nbsp;&nbsp;{{item}}
+    </li>
+</ul>
+<br>
+<h3>已经完成</h3> {{done.length}}
+<ul *ngFor="let item of done">
+    <li>
+        <input type="checkbox" checked="true"/>&nbsp;&nbsp;{{item}}
+    </li>
+</ul>

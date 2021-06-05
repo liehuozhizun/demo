@@ -1,0 +1,15 @@
+
+<table border="1">
+    <tr>
+        <td>加密：<input (keydown)="encryptString($event)" [(ngModel)]="inputPlainString"/></td>
+        <td>{{outputCipherString}}</td>
+    </tr>
+    <tr>
+        <td>解密：<input (keydown)="decryptString($event)" [(ngModel)]="inputCipherString"/></td>
+        <td>{{outputPlainString}}</td>
+    </tr>
+</table>
+
+
+<br>
+<br>

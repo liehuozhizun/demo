@@ -1,0 +1,50 @@
+<!--
+    <app-header></app-header> 
+-->
+<h2>I'm a news component</h2>
+
+<!-- 
+    <img src="assets/email.png" alt="picture">
+-->
+{{imgUrl}}
+
+<img [src]="imgUrl"/>
+
+<div *ngIf="flag">
+    <img [src]="imgUrl">
+</div>
+
+<div *ngIf="!flag">
+    <img src="assets/email.png">
+</div>
+
+<div [ngSwitch]="flag">
+    <div *ngSwitchCase=true>
+        TRUE
+    </div>
+    <div *ngSwitchDefault>FALSE</div>
+</div>
+
+<div [ngClass]='{"blue":true, "red":false}'>
+    ngClass
+</div>
+
+
+
+<div [ngClass]='{"orange":flag}'>
+    ngClass
+</div>
+
+<p [ngStyle]="{'color':'red'}">ngStyle</p>
+
+{{today}}<br>
+{{today | date:'yyyy-MM-dd HH:mm:ss'}}
+
+<p>事件</p>
+<button (click)="run()">执行事件</button>
+
+keyDown:<input type="text" (keydown)="keyDown($event)"/><br>
+keyUp:<input type="text" (keyup)="keyUp($event)"/>
+
+<h1>双向数据绑定-MVVM  只针对表单</h1>
+<input type="text" [(ngModel)]='keywords'/>{{keywords}}

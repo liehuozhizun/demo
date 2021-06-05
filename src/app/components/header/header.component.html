@@ -1,0 +1,28 @@
+<p>I'm a header component: {{title}} : {{msg}}</p>
+
+<div title="static data">
+    binding static data 
+</div>
+
+<div [title]="student2.name">
+    binding dynamic data
+</div>
+
+<div class="red">
+    binding innerHTML: {{innerHTMLContent}}
+</div>
+
+<span [innerHTML]="innerHTMLContent" class="red"></span>
+
+
+<ol>
+    <li *ngFor="let item of arr">
+        {{item}}
+    </li>
+</ol>
+
+<ul>
+    <li *ngFor="let student of students">
+        {{student.name}} - {{student.age}}
+    </li>
+</ul>

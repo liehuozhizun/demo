@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h3{
+    text-align: center;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+.people_list {
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #eee;
+
+    li{
+        height: 50px;
+        line-height: 50px;
+        .form_input{
+            width: 300px;
+            height: 28px;;
+        }
+    }
+
+    button{
+        width: 100px;
+        height: 30px;
+        float: right;
+        margin-right: 50px;
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,14 @@
+<p>fe works!</p>
+
+<button (click)='getData()'>get</button>
+
+<ul>
+    <li *ngFor="let item of list">
+        {{item.title}};
+    </li>
+</ul>
+
+<button (click)='postData()'>login</button>
+token: {{resp.payload}}
+<button (click)='test()'>test</button>
+test: {{testString}}
